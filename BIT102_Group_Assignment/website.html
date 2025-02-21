@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Gym</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS for Animations -->
+    <style>
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .map-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        #booking {
+        background-color: #f8f9fa;
+        padding: 30px;
+        border: 2px solid #dee2e6;
+        border-radius: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #booking h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+
+    .booking-form {
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #ced4da;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .booking-form .form-label {
+        font-weight: 600;
+        color: #495057;
+    }
+
+    .booking-form .form-control,
+    .booking-form .form-select {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking-form .btn {
+        background-color: #343a40;
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .booking-form .btn:hover {
+        background-color: #495057;
+    }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-4 fade-in">
+        <h1>Elite Gym Center</h1>
+        <p class="lead">Where Strength Meets Excellence</p>
+    </header>    
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(180deg, #fee966 21.18%, #fedb00 84.18%);">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="color: black;">Elite Gym Center</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home" style="color: black;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#pricing">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#booking">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" style="color: black;" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5">
+        <section id="home" class="text-center mb-5 fade-in">
+            <h2>Welcome to Elite Gym Center!</h2>
+            <p class="lead">We’re thrilled to have you on board! Explore our resources, track your progress, and crush your goals. Let’s make today an elite day!</p>
+        </section>
+
+        <section id="gallery" class="mb-5 fade-in">
+            <h2 class="text-center">Gallery</h2>
+            <div class="row mt-4">
+                <div class="col-md-3">
+                    <img src="img/image1.jpg" class="img-fluid rounded shadow-sm" alt="Sample Photo 1">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/image2.jpg" class="img-fluid rounded shadow-sm" alt="Sample Photo 2">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/image3.jpg" class="img-fluid rounded shadow-sm" alt="Sample Photo 3">
+                </div>
+                <div class="col-md-3">
+                    <img src="img/image4.jpg" class="img-fluid rounded shadow-sm" alt="Sample Photo 4">
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="mb-5 fade-in">
+            <h2 class="text-center">Our Packages</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Basic Package</h3>
+                            <p class="card-text">Price: Rs.10,000 / month</p>
+                            <ul class="list-unstyled">
+                                <li>Access during standard hours</li>
+                                <li>Use of standard equipment (treadmills, weights, etc.)</li>
+                                <li>Locker access during visits</li>
+                                <li>One initial fitness assessment</li>
+                                <li>Limited group classes (e.g., yoga, Zumba)</li>
+                                <li>Basic app features for tracking workouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Premium Package</h3>
+                            <p class="card-text">Price: Rs.30,000 / month</p>
+                            <ul class="list-unstyled">
+                                <li>24/7 gym access</li>
+                                <li>Use of advanced or specialized equipment</li>
+                                <li>Monthly personal training sessions</li>
+                                <li>Customized workout and diet plans</li>
+                                <li>Access to advanced or specialty classes (e.g., HIIT, Pilates)</li>
+                                <li>Regular nutrition guidance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Platinum Package</h3>
+                            <p class="card-text">Price: Rs.45,000 / month</p>
+                            <ul class="list-unstyled">
+                                <li>All Premium Package benefits</li>
+                                <li>Unlimited personal training sessions</li>
+                                <li>Priority locker access with personal storage</li>
+                                <li>Complimentary gym merchandise (e.g., water bottles, towels)</li>
+                                <li>Access to exclusive gym events and challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <section id="booking" class="mb-5 fade-in">
+            <h2 class="text-center">Book a Membership</h2>
+            <form id="bookingForm" class="mt-4 mx-auto booking-form" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="package" class="form-label">Choose Package:</label>
+                    <select id="package" name="package" class="form-select" required>
+                        <option value="basic">Basic Package</option>
+                        <option value="premium">Premium Package</option>
+                        <option value="platinum">Platinum Package</option>
+                    </select>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="date" class="form-label">Preferred Date:</label>
+                    <input type="date" id="date" name="date" class="form-control" required>
+                </div>
+        
+                <div class="mb-3">
+                    <label for="message" class="form-label">Additional Message:</label>
+                    <textarea id="message" name="message" rows="4" class="form-control"></textarea>
+                </div>
+        
+                <button type="submit" class="btn btn-dark w-100">Submit</button>
+            </form>
+        </section>
+
+        <section id="contact" class="mb-5 text-center fade-in">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:rujal.maharjan@gmail.com">rujal.maharjan@gmail.com</a></p>
+            <p>Phone: +977-987654321</p>
+            <p>Address: Elite Gym Center, Teku, Kathmandu</p>
+            <!-- Embedded Google Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8062135226833!2d85.3029676!3d27.698323799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b0071f1b93%3A0xcd501f715b69d865!2sElite%20Physical%20Fitness%20Centre!5e1!3m2!1sen!2snp!4v1736436403088!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>            
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3 fade-in">
+        <p>&copy; 2022 Elite Gym. All rights reserved.</p>  
+        <p>Follow us on:
+            <a href="#" class="text-white ms-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white ms-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white ms-2"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        const name = document.getElementById('name').value;
+        const packageSelected = document.getElementById('package').value;
+        const date = document.getElementById('date').value;
+
+        // Show the alert message
+        alert(`Dear ${name}, your membership for the ${packageSelected} package has been booked for ${date}.`);
+    });
+</script>
+</html>
